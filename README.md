@@ -20,28 +20,3 @@ For AWS Cloud:
 
 
 
- az vm list-skus --location westus2 --size Standard_D --all --output table| grep None
- Standard_D4ps_v5 
-
-
-
-https://github.com/Azure/application-gateway-kubernetes-ingress/issues/1533
-
-https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/quickstart-deploy-application-gateway-for-containers-alb-controller?tabs=install-helm-windows
-
-  1 az aks update -g myResourceGroup  -n myAKSCluster  --enable-oidc-issuer --enable-workload-identity
-2 az identity create --name manageidname --resource-group myResourceGroup --location westus2
-        {
-    "clientId": "d7f894e3-ec2b-4fe9-9c6a-fbc9e8c9a31b",
-    "id": "/subscriptions/c59cf824-2a78-42de-92c6-c0d6a5f25cb1/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/manageidname",
-    "location": "westus2",
-    "name": "manageidname",
-    "principalId": "696e5cb6-ad3e-4212-90fc-585291f65745",
-    "resourceGroup": "myResourceGroup",
-    "systemData": null,
-    "tags": {},
-    "tenantId": "3822b983-0881-4731-b451-98a08094837e",
-    "type": "Microsoft.ManagedIdentity/userAssignedIdentities"
-    }
-az identity show -g myResourceGroup -n manageidname
-
