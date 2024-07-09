@@ -1,0 +1,9 @@
+aws_region = "eu-west-1"
+profile = "mind"
+location =  "westus2"
+prefix = "test-mind-io"
+replicas-count=3
+namespace="example"
+host-name="app.vigregus.com"
+image_repository="nginxdemos/hello"
+image_tag="0.4-plain-text"
